@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>WCB Cafe</title>
+  <meta name="description" content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!--css-->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.bgswitcher.js"></script>
+</head>
+
+<body>
+  <div id="home" class="big-bg">
+    <header class="page-header wrapper">
+      <h1>
+        <a href="index.html"><img class="logo" src="images/logo.svg" alt="WCBカフェホーム" /></a>
+      </h1>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="news.html">News</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="home-content wrapper">
+      <h2 class="page-title">We'll Make Your Day</h2>
+      <p>
+        おしゃれなカフェで癒されてみませんか？無添加の食材で体の中からリフレッシュ。
+      </p>
+      <a class="button" href="menu.html">メニューを見る</a>
+    </div>
+    　
+    <!-- /home-content -->
+  </div>
+
+  <script>
+    jQuery(function ($) {
+      $("#home").bgSwitcher({
+        images: ['images/main-bg.jpg', 'images/menu3.jpg', 'images/contact-bg.jpg'],
+        //切り替える背景画像を指定
+        interval: 3000,
+
+        //切り替えを繰り返すか指定。true=繰り返す　false=繰り返さない
+        loop: true,
+
+        //背景画像をシャッフルするか指定
+        shuffle: false,
+
+        //エフェクトの種類をfade,blind,slide,drop,hideから指定
+        effect: "fade",
+
+        //エフェクトの時間を指定
+        duration: 500,
+
+        //エフェクトのイメージングをlinear,swingから指定
+        easing: "swing"
+      });
+    });
+  </script>
+  <!-- /#home -->
+</body>
+
+</html>
